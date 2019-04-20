@@ -3,12 +3,13 @@ var safari = Application('Safari');
 var systemEvents = Application('System Events');
 const frontmost_app_name = Application('System Events').applicationProcesses.where({ frontmost: true }).name()[0];
 
-//safari.activate();
-
 if (frontmost_app_name == 'Safari') {
 	var safari_current_tab_url = safari.windows[0].currentTab.url();
 	closeSafariTab();
 	chrome.activate();
+	if (chrome.windows.length <= 1) {
+		chrome.Document().make();
+	}
   var tab = chrome.Tab({
     url: safari_current_tab_url
   });
@@ -17,6 +18,9 @@ if (frontmost_app_name == 'Safari') {
   var chrome_current_tab_url = chrome.windows[0].activeTab.url();
 	closeChromeTab();
 	safari.activate();
+	if (safari.windows.length <= 1) {
+		safari.Document().make();
+	}
   var tab = safari.Tab({
     url: chrome_current_tab_url
   });
