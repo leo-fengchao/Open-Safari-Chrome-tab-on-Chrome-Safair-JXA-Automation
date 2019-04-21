@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>574520587.64150298</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.google.Chrome</string>
+										<key>Name</key>
+										<string>Google Chrome</string>
+										<key>NewFile</key>
+										<string>/Applications/Google Chrome.app</string>
+									</dict>
+									<key>ApplicationConditionType</key>
+									<string>Active</string>
+									<key>ConditionType</key>
+									<string>Application</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>Application</key>
+											<dict>
+												<key>BundleIdentifier</key>
+												<string>com.apple.Safari</string>
+												<key>Name</key>
+												<string>Safari</string>
+												<key>NewFile</key>
+												<string>/Applications/Safari.app</string>
+											</dict>
+											<key>ApplicationConditionType</key>
+											<string>Active</string>
+											<key>ConditionType</key>
+											<string>Application</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array/>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>MacroActionType</key>
+										<string>SetVariableToText</string>
+										<key>Text</key>
+										<string>%SafariURL%</string>
+										<key>Variable</key>
+										<string>VarName</string>
+									</dict>
+									<dict>
+										<key>KeyCode</key>
+										<integer>13</integer>
+										<key>MacroActionType</key>
+										<string>SimulateKeystroke</string>
+										<key>Modifiers</key>
+										<integer>256</integer>
+										<key>ReleaseAll</key>
+										<false/>
+										<key>TargetApplication</key>
+										<dict/>
+										<key>TargetingType</key>
+										<string>Front</string>
+									</dict>
+									<dict>
+										<key>IsActive</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>SelectMenuItem</string>
+										<key>Menu</key>
+										<array>
+											<string>文件</string>
+											<string>关闭标签页</string>
+										</array>
+										<key>TargetApplication</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.apple.Safari</string>
+											<key>Name</key>
+											<string>Safari 浏览器</string>
+											<key>NewFile</key>
+											<string>/Applications/Safari.app</string>
+										</dict>
+										<key>TargetingType</key>
+										<string>Specific</string>
+									</dict>
+									<dict>
+										<key>Argument</key>
+										<string>%Variable%VarName%</string>
+										<key>Command</key>
+										<string>NewTab</string>
+										<key>MacroActionType</key>
+										<string>SafariControl</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>WebBrowser</key>
+										<string>Google Chrome</string>
+									</dict>
+									<dict>
+										<key>Action</key>
+										<string>SelectWindow</string>
+										<key>HeightExpression</key>
+										<string>300</string>
+										<key>HorizontalExpression</key>
+										<string>125</string>
+										<key>MacroActionType</key>
+										<string>ManipulateWindow</string>
+										<key>TargetApplication</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.google.Chrome</string>
+											<key>Name</key>
+											<string>Google Chrome</string>
+											<key>NewFile</key>
+											<string>/Applications/Google Chrome.app</string>
+										</dict>
+										<key>Targeting</key>
+										<string>FrontWindow</string>
+										<key>TargetingType</key>
+										<string>Specific</string>
+										<key>VerticalExpression</key>
+										<string>125</string>
+										<key>WidthExpression</key>
+										<string>300</string>
+										<key>WindowIndexExpression</key>
+										<string>2</string>
+										<key>WindowName</key>
+										<string></string>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<false/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%ChromeURL%</string>
+								<key>Variable</key>
+								<string>VarName</string>
+							</dict>
+							<dict>
+								<key>KeyCode</key>
+								<integer>13</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>256</integer>
+								<key>ReleaseAll</key>
+								<false/>
+								<key>TargetApplication</key>
+								<dict/>
+								<key>TargetingType</key>
+								<string>Front</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SelectMenuItem</string>
+								<key>Menu</key>
+								<array>
+									<string>文件</string>
+									<string>关闭标签页</string>
+								</array>
+								<key>TargetApplication</key>
+								<dict>
+									<key>BundleIdentifier</key>
+									<string>com.google.Chrome</string>
+									<key>Name</key>
+									<string>Google Chrome</string>
+									<key>NewFile</key>
+									<string>/Applications/Google Chrome.app</string>
+								</dict>
+								<key>TargetingType</key>
+								<string>Specific</string>
+							</dict>
+							<dict>
+								<key>Argument</key>
+								<string>%Variable%VarName%</string>
+								<key>Command</key>
+								<string>NewTab</string>
+								<key>MacroActionType</key>
+								<string>SafariControl</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>WebBrowser</key>
+								<string>Safari</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>SelectWindow</string>
+								<key>HeightExpression</key>
+								<string>300</string>
+								<key>HorizontalExpression</key>
+								<string>125</string>
+								<key>MacroActionType</key>
+								<string>ManipulateWindow</string>
+								<key>TargetApplication</key>
+								<dict>
+									<key>BundleIdentifier</key>
+									<string>com.apple.Safari</string>
+									<key>Name</key>
+									<string>Safari</string>
+									<key>NewFile</key>
+									<string>/Applications/Safari.app</string>
+								</dict>
+								<key>Targeting</key>
+								<string>FrontWindow</string>
+								<key>TargetingType</key>
+								<string>Specific</string>
+								<key>VerticalExpression</key>
+								<string>125</string>
+								<key>WidthExpression</key>
+								<string>300</string>
+								<key>WindowIndexExpression</key>
+								<string>2</string>
+								<key>WindowName</key>
+								<string></string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>NotifyOnFailure</key>
+						<false/>
+						<key>Path</key>
+						<string></string>
+						<key>StopOnFailure</key>
+						<false/>
+						<key>Text</key>
+						<string>var chrome = Application('Google Chrome');
+var safari = Application('Safari');
+var systemEvents = Application('System Events');
+const frontmost_app_name = Application('System Events').applicationProcesses.where({ frontmost: true }).name()[0];
+
+if (frontmost_app_name == 'Safari') {
+	var safari_current_tab_url = safari.windows[0].currentTab.url();
+	closeSafariTab();
+	chrome.activate();
+	if (chrome.windows.length == 0) {
+		chrome.Window().make();
+	}
+  var tab = chrome.Tab({
+    url: safari_current_tab_url
+  });
+  chrome.windows[0].tabs.push(tab);
+} else if (frontmost_app_name == 'Google Chrome'){
+  var chrome_current_tab_url = chrome.windows[0].activeTab.url();
+	closeChromeTab();
+	safari.activate();
+	if (safari.windows.length &lt;= 1) {
+		safari.Document().make();
+	}
+  var tab = safari.Tab({
+    url: chrome_current_tab_url
+  });
+  tabCount = safari.windows[0].tabs.push(tab) - 1;
+  safari.windows[0].currentTab = safari.windows[0].tabs[tabCount];
+} else{
+
+}
+
+function closeSafariTab(){
+	var safariProcess = systemEvents.processes.byName('Safari');
+	var safariFileMenu = safariProcess.menuBars[0].menuBarItems.byName('文件');
+	var safariCloseMenu = safariFileMenu.menus[0].menuItems.byName('关闭标签页');
+	var safariCloseWindowMenu = safariFileMenu.menus[0].menuItems.byName('关闭窗口');
+	if (safariCloseMenu.enabled()) {
+		safariCloseMenu.click();
+	}else {
+		safariCloseWindowMenu.click();
+	}
+}
+
+function closeChromeTab(){
+	var chromeProcess = systemEvents.processes.byName('Google Chrome');
+	var chromeFileMenu = chromeProcess.menuBars[0].menuBarItems.byName('文件');
+	var chromeCloseMenu = chromeFileMenu.menus[0].menuItems.byName('关闭标签页');
+	chromeCloseMenu.click();
+}
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>577531847.05291998</real>
+				<key>ModificationDate</key>
+				<real>577531857.03784204</real>
+				<key>Name</key>
+				<string>浏览器穿梭</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>520188D0-6C33-424C-9013-78A960CCC983</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>实用</string>
+		<key>ToggleMacroUID</key>
+		<string>02A6F0B8-B644-43F3-AA38-C29342FFD115</string>
+		<key>UID</key>
+		<string>8E62DFE3-E57D-4160-9C46-D0BE2ACC7FEC</string>
+	</dict>
+</array>
+</plist>
